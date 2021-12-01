@@ -1,12 +1,24 @@
+import { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import MainCard from '../src/atomic/atoms/MainCard'
 import MainTitle from '../src/atomic/atoms/MainTitle'
 import ItemCard from '../src/atomic/molecules/ItemCard'
-import styles from '../styles/Home.module.css'
+import { getAllCharacteres } from '../src/services'
+import { ICharacter } from '../src/services/types'
+import CardWrapper from '../src/atomic/molecules/CardWrapper'
+import { useAppSelector, useAppDispatch } from '../src/store'
+import { setCharacters } from '../src/store/slices/characters'
+
 
 const Home: NextPage = () => {
+  // const [characteres, setCharacteres] = useState<ICharacter[]>([])
+  const characters = useAppSelector(state => state.charactersReducer.characters)
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    getAllCharacteres().then(({characters: chars }) => dispatch(setCharacters(chars)))
+  }, [])
   return (
     <div>
       <Head>
@@ -17,7 +29,11 @@ const Home: NextPage = () => {
 
         <MainCard>
           <MainTitle>Rick and Morty Web App</MainTitle>
-          <ItemCard/>
+          <CardWrapper>
+            {characters?.map?.((char) => (
+              <ItemCard key={char.id} char={char}/>
+            ))}
+          </CardWrapper>
         </MainCard>
     </div>
   )

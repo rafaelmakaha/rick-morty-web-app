@@ -1,0 +1,21 @@
+query {
+  characters(page: 1) {
+    info {
+      count
+    }
+    results {
+      id
+      name
+      status
+      species
+      type
+      gender
+      origin
+      location
+      image
+      episode
+      url
+      created
+    }
+  }
+}

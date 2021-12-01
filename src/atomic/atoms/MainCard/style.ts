@@ -5,7 +5,7 @@ export const Background = styled.div`
   flex-direction: column;
   background-color: ${(props) => props.color || "#aaa"};
   left: 5%;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   width: 90vw;
 `

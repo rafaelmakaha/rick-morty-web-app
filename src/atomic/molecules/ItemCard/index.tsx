@@ -1,20 +1,28 @@
 import React from "react";
+import { ICharacter } from "../../../services/types";
 import CardTitle from "../../atoms/CardTitle";
 import ItemDescription from "../../atoms/ItemDescription";
-import { Container } from "./style";
+import { Container, Image } from "./style";
 
 interface IItemCard {
-    children: React.ReactNode
+    char: ICharacter
 }
 
-const ItemCard: React.FC<IItemCard> = () => (
+const ItemCard: React.FC<IItemCard> = ({char}) => (
     <Container>
         <CardTitle>
-            Teste
+            {char?.name}
         </CardTitle>
         <ItemDescription>
-            Zeca
+            {char?.status}
         </ItemDescription>
+        <ItemDescription>
+            {char?.species}
+        </ItemDescription>
+        <ItemDescription>
+            {char?.gender}
+        </ItemDescription>
+        <Image alt={char?.name} src={char?.image}/>
     </Container>
 )
 
