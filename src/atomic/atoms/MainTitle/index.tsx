@@ -2,11 +2,12 @@ import React from 'react'
 
 import { Title } from './style'
 
-interface IMainTitle {
-    children: React.ReactNode
+export interface IMainTitle {
+    testID?: string
+    children?: React.ReactNode
 }
 
-const MainTitle: React.FC<IMainTitle> = ({ children }) => (
+const MainTitle: React.FC<IMainTitle> = ({ testID = 'MainTitle', children }) => (
     <Title>{children}</Title>
 )
 

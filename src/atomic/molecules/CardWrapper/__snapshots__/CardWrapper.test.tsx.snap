@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/CardWrapper should render snapshot 1`] = `
+<div
+  class="style__Wrapper-sc-uyuvfp-0 gqIkSF"
+>
+  SomeChildren
+</div>
+`;

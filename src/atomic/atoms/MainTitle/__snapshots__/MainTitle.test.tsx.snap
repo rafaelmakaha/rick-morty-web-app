@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/MainTitle should render snapshot 1`] = `
+<h1
+  class="style__Title-sc-ji39h-0 iwAelM"
+>
+  Some Children
+</h1>
+`;

@@ -1,12 +1,12 @@
 import React from "react";
-import ItemCard from "../ItemCard";
 import { Wrapper } from "./style";
 
-interface ICardWrapper {
+export interface ICardWrapper {
+    testID?: string
     children: React.ReactNode
 }
 
-const CardWrapper: React.FC<ICardWrapper> = ({children}) => (
+const CardWrapper: React.FC<ICardWrapper> = ({ testID = 'CardWrapper', children}) => (
     <Wrapper>
         {children}
     </Wrapper>

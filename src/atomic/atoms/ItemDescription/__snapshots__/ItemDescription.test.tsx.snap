@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/ItemDescription should render snapshot 1`] = `
+<p
+  class="style__Text-sc-bm4pk8-0 kktcfB"
+>
+  SomeChildren
+</p>
+`;

@@ -4,11 +4,12 @@ import CardTitle from "../../atoms/CardTitle";
 import ItemDescription from "../../atoms/ItemDescription";
 import { Container, Image } from "./style";
 
-interface IItemCard {
+export interface IItemCard {
+    testID?: string
     char: ICharacter
 }
 
-const ItemCard: React.FC<IItemCard> = ({char}) => (
+const ItemCard: React.FC<IItemCard> = ({ testID = 'ItemCard', char}) => (
     <Container>
         <CardTitle>
             {char?.name}

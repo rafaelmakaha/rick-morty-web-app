@@ -1,12 +1,13 @@
 import React from "react";
 import { Background } from "./style";
 
-interface IMainCard {
-  color?: String;
-  children?: React.ReactNode;
+export interface IMainCard {
+  testID?: string
+  color?: string
+  children?: React.ReactNode
 }
 
-const MainCard: React.FC<IMainCard> = ({ color, children }) => (
+const MainCard: React.FC<IMainCard> = ({ testID = 'MainCard', color, children }) => (
   <Background color={color}>{children}</Background>
 );
 

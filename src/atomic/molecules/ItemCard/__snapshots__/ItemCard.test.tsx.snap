@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/ItemCard should render snapshot 1`] = `
+<div
+  class="style__Container-sc-1ll6tf3-0 ebsKbC"
+>
+  <h2
+    class="style__Title-sc-1wrd5mx-0 fqesxN"
+  >
+    Character 0
+  </h2>
+  <p
+    class="style__Text-sc-bm4pk8-0 kktcfB"
+  >
+    Some Status
+  </p>
+  <p
+    class="style__Text-sc-bm4pk8-0 kktcfB"
+  >
+    Some Species
+  </p>
+  <p
+    class="style__Text-sc-bm4pk8-0 kktcfB"
+  >
+    Some gender
+  </p>
+  <img
+    alt="Character 0"
+    class="style__Image-sc-1ll6tf3-1 cxnJHb"
+    src="Some url"
+  />
+</div>
+`;

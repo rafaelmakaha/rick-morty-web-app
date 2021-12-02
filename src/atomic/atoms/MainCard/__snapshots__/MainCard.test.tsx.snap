@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/MainCard should render snapshot 1`] = `
+<div
+  class="style__Background-sc-1o95tzs-0 jeHnGC"
+  color="red"
+>
+  Some Children
+</div>
+`;

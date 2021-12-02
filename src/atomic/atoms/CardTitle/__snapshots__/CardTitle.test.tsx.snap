@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atoms/CardTitle should render snapshot 1`] = `
+<h2
+  class="style__Title-sc-1wrd5mx-0 fqesxN"
+>
+  Some Children
+</h2>
+`;

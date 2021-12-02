@@ -2,11 +2,12 @@ import React from 'react'
 
 import { Title } from './style'
 
-interface ICardTitle {
+export interface ICardTitle {
+    testID?: string
     children: React.ReactNode
 }
 
-const CardTitle: React.FC<ICardTitle> = ({ children }) => (
+const CardTitle: React.FC<ICardTitle> = ({ testID = 'CardTitle', children }) => (
     <Title>{children}</Title>
 )
 

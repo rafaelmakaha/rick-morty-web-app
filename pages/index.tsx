@@ -12,7 +12,6 @@ import { setCharacters } from '../src/store/slices/characters'
 
 
 const Home: NextPage = () => {
-  // const [characteres, setCharacteres] = useState<ICharacter[]>([])
   const characters = useAppSelector(state => state.charactersReducer.characters)
   const dispatch = useAppDispatch()
 
