@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     border: 2px;
     border-radius: 10px;
-    background-color: #506506;
+    background-color: ${(props) => props.color || "#506506"};
     display: flex;
     flex-direction: column;
     height: auto;

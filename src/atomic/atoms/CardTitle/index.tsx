@@ -4,7 +4,7 @@ import { Title } from './style'
 
 export interface ICardTitle {
     testID?: string
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 const CardTitle: React.FC<ICardTitle> = ({ testID = 'CardTitle', children }) => (

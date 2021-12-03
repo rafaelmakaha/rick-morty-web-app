@@ -6,11 +6,12 @@ import { Container, Image } from "./style";
 
 export interface IItemCard {
     testID?: string
+    color?: string
     char: ICharacter
 }
 
-const ItemCard: React.FC<IItemCard> = ({ testID = 'ItemCard', char}) => (
-    <Container>
+const ItemCard: React.FC<IItemCard> = ({ color, testID = 'ItemCard', char}) => (
+    <Container color={color}>
         <CardTitle>
             {char?.name}
         </CardTitle>
