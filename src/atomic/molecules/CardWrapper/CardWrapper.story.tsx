@@ -11,13 +11,12 @@ const Template: Story<ICardWrapper> = (args) => <CardWrapper {...args} />
 export const Normal = Template.bind({})
 
 const argTypes = {
-    children: {
-        control: 'text'
-    }
+  children: {
+    control: 'text'
+  }
 }
 
 const defaultArgs: Omit<ICardWrapper> = {}
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes
-

@@ -1,2 +1,2 @@
-export * from './assignTestId'
+export * from './mockTestId'
 export * from './withProviders'

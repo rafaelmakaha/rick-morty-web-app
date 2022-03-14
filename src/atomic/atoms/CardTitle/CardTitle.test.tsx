@@ -4,30 +4,29 @@ import CardTitle, { ICardTitle } from './index'
 import { mockTestID } from '../../../utils'
 
 describe('Atoms/CardTitle', () => {
-    const props: ICardTitle = {
-        testID: 'CardItem',
-        children: 'Some Children'
-    }
+  const props: ICardTitle = {
+    testID: 'CardItem',
+    children: 'Some Children'
+  }
 
-    const renderComponent = () => render(<CardTitle {...props} />)
+  const renderComponent = () => render(<CardTitle {...props} />)
 
-    let component = renderComponent()
+  let component = renderComponent()
 
-    beforeEach(() => {
-        jest.clearAllMocks()
-        cleanup()
-        component = renderComponent()
-    })
+  beforeEach(() => {
+    jest.clearAllMocks()
+    cleanup()
+    component = renderComponent()
+  })
 
-    const el_container = mockTestID('div', props.testID!)
+  const elContainer = mockTestID('div', props.testID!)
 
+  it(`should render component #${elContainer}`, () => {
+    const sut = component.findByTestId(el_container)
+    expect(sut).toBeTruthy()
+  })
 
-    it(`should render component #${el_container}`, () => {
-        const sut = component.findByTestId(el_container)
-        expect(sut).toBeTruthy()
-    })
-
-    it('should render snapshot', () => {
-        expect(component.container.firstChild).toMatchSnapshot()
-    })
+  it('should render snapshot', () => {
+    expect(component.container.firstChild).toMatchSnapshot()
+  })
 })

@@ -1,32 +1,32 @@
-import { cleanup, render } from "@testing-library/react";
-import React from "react";
-import ItemDescription, { IItemDescription } from ".";
-import { mockTestID } from "../../../utils";
+import { cleanup, render } from '@testing-library/react'
+import React from 'react'
+import ItemDescription, { IItemDescription } from '.'
+import { mockTestID } from '../../../utils'
 
 describe('Atoms/ItemDescription', () => {
-    const props: IItemDescription = {
-        testID: 'ItemDescription',
-        children: 'SomeChildren'
-    }
+  const props: IItemDescription = {
+    testID: 'ItemDescription',
+    children: 'SomeChildren'
+  }
 
-    const renderComponent = () => render(<ItemDescription {...props}/>)
+  const renderComponent = () => render(<ItemDescription {...props} />)
 
-    let component = renderComponent()
+  let component = renderComponent()
 
-    beforeEach(() => {
-        jest.clearAllMocks()
-        cleanup()
-        component = renderComponent()
-    })
+  beforeEach(() => {
+    jest.clearAllMocks()
+    cleanup()
+    component = renderComponent()
+  })
 
-    const el_container = mockTestID('div', props.testID!)
+  const elContainer = mockTestID('div', props.testID!)
 
-    it(`should render component #${el_container}`, () => {
-        const sut = component.findByTestId(el_container)
-        expect(sut).toBeTruthy()
-    })
+  it(`should render component #${elContainer}`, () => {
+    const sut = component.findByTestId(el_container)
+    expect(sut).toBeTruthy()
+  })
 
-    it('should render snapshot', () => {
-        expect(component.container.firstChild).toMatchSnapshot()
-    })
+  it('should render snapshot', () => {
+    expect(component.container.firstChild).toMatchSnapshot()
+  })
 })

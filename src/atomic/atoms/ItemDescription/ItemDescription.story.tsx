@@ -6,14 +6,16 @@ export default {
   title: 'Atoms/ItemDescription'
 } as Meta
 
-const Template: Story<IItemDescription> = (args) => <ItemDescription {...args} />
+const Template: Story<IItemDescription> = (args) => (
+  <ItemDescription {...args} />
+)
 
 export const Normal = Template.bind({})
 
 const argTypes = {
-    children: {
-        control: 'text'
-    }
+  children: {
+    control: 'text'
+  }
 }
 
 const defaultArgs: IItemDescription = {
@@ -22,4 +24,3 @@ const defaultArgs: IItemDescription = {
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes
-

@@ -1,10 +1,10 @@
+import { gql } from '@apollo/client'
 import client from './apollo-client'
-import { gql } from "@apollo/client"
-import { IGetAllCharacters } from './types';
+import { IGetAllCharacters } from './types'
 
 export const getAllCharacteres = async () => {
-    const { data } = await client.query<IGetAllCharacters>({
-        query: gql`
+  const { data } = await client.query<IGetAllCharacters>({
+    query: gql`
       query {
         characters(page: 1) {
           info {
@@ -24,13 +24,13 @@ export const getAllCharacteres = async () => {
           }
         }
       }
-      `,
-    });
+    `
+  })
 
-    return {
-        characters: data.characters.results,
-        info: data.characters.info
-    };
+  return {
+    characters: data.characters.results,
+    info: data.characters.info
+  }
 }
 
 //   useQuery({

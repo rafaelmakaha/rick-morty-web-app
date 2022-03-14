@@ -22,4 +22,3 @@ const defaultArgs: ICardTitle = {
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes
-
