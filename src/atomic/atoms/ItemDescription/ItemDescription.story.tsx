@@ -16,7 +16,9 @@ const argTypes = {
     }
 }
 
-const defaultArgs: Omit<IItemDescription> = {}
+const defaultArgs: IItemDescription = {
+  children: 'Sample Text'
+}
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes

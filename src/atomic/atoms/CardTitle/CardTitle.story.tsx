@@ -10,9 +10,15 @@ const Template: Story<ICardTitle> = (args) => <CardTitle {...args} />
 
 export const Normal = Template.bind({})
 
-const argTypes = {}
+const argTypes = {
+  children: {
+    control: 'text'
+  }
+}
 
-const defaultArgs: Omit<ICardTitle> = {}
+const defaultArgs: ICardTitle = {
+  children: 'Sample Text'
+}
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes
