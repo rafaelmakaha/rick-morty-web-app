@@ -16,11 +16,8 @@ const ItemCard: React.FC<IItemCard> = ({
   char
 }) => (
   <Container color={color}>
-    <CardTitle>{char?.name}</CardTitle>
-    <ItemDescription>{char?.status}</ItemDescription>
-    <ItemDescription>{char?.species}</ItemDescription>
-    <ItemDescription>{char?.gender}</ItemDescription>
     <Image alt={char?.name} src={char?.image} />
+    <CardTitle>{char?.name}</CardTitle>
   </Container>
 )
 

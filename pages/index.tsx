@@ -5,7 +5,7 @@ import MainCard from '../src/atomic/atoms/MainCard'
 import MainTitle from '../src/atomic/atoms/MainTitle'
 import ItemCard from '../src/atomic/molecules/ItemCard'
 import { getAllCharacteres } from '../src/services'
-import CardWrapper from '../src/atomic/molecules/CardWrapper'
+import MainGrid from '../src/atomic/molecules/MainGrid'
 import { useAppSelector, useAppDispatch } from '../src/store'
 import { setCharacters } from '../src/store/slices/characters'
 
@@ -30,11 +30,11 @@ const Home: NextPage = () => {
 
       <MainCard>
         <MainTitle>Rick and Morty Web App</MainTitle>
-        <CardWrapper>
+        <MainGrid>
           {characters?.map?.((char) => (
             <ItemCard key={char.id} char={char} />
           ))}
-        </CardWrapper>
+        </MainGrid>
       </MainCard>
     </div>
   )

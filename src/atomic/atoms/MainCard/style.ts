@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { Div } from '../Div'
 
-export const Background = styled.div`
+export const Background = styled(Div)`
+  background-color: ${({ theme }) => theme.colors.lightGrey};
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.lightGrey};
-  left: 5%;
+  align-items: center;
   min-height: 100vh;
   position: absolute;
-  width: 90vw;
+  width: 100vw;
 `
