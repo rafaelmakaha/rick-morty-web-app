@@ -1,12 +1,12 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react'
-import CardWrapper, { ICardWrapper } from '.'
+import MainGrid, { IMainGrid } from '.'
 
 export default {
-  title: 'Molecules/CardWrapper'
+  title: 'Molecules/MainGrid'
 } as Meta
 
-const Template: Story<ICardWrapper> = (args) => <CardWrapper {...args} />
+const Template: Story<IMainGrid> = (args) => <MainGrid {...args} />
 
 export const Normal = Template.bind({})
 
@@ -16,7 +16,7 @@ const argTypes = {
   }
 }
 
-const defaultArgs: Omit<ICardWrapper> = {}
+const defaultArgs: Omit<IMainGrid> = {}
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes
