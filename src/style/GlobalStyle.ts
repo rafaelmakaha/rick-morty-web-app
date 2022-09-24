@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
+import Schwifty from '../assets/fonts/schwifty.ttf'
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: ${({ theme }) => theme.titleFontFamily};
+    src: url(${Schwifty}) format('truetype');
+  }
+
   * {
     box-sizing: border-box;
     font-family: ${({ theme }) => theme.fontFamily};

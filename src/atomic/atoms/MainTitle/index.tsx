@@ -9,7 +9,8 @@ export interface IMainTitle {
 
 const MainTitle: React.FC<IMainTitle> = ({
   testID = 'MainTitle',
-  children
-}) => <Title>{children}</Title>
+  children,
+  ...props
+}) => <Title {...props}>{children}</Title>
 
 export default MainTitle

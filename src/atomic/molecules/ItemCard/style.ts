@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   height: auto;
   padding: 12px;
-  width: 80%;
+  width: 100%;
   &:hover {
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     transition-property: color, background-color, border-color,

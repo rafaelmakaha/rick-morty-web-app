@@ -2,6 +2,7 @@ export type TTheme = typeof theme
 
 export const theme = {
   fontFamily: 'Gothan',
+  titleFontFamily: 'Schwifty',
   fontColor: '#000',
   fontSize: 14,
 
@@ -15,6 +16,8 @@ export const theme = {
     greenUgly: '#506506',
     white: '#ffffff',
     black: '#000000',
-    brown: '#44281d'
+    brown: '#44281d',
+    blue: '#16aac9',
+    toxicYellow: '#c9da4e'
   }
 }
