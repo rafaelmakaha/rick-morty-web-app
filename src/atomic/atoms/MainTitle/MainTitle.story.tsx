@@ -16,7 +16,7 @@ const argTypes = {
   }
 }
 
-const defaultArgs: Omit<IMainTitle> = {}
+const defaultArgs = {}
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes

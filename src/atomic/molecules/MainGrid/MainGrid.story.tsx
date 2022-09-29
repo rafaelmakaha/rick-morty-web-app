@@ -16,7 +16,7 @@ const argTypes = {
   }
 }
 
-const defaultArgs: Omit<IMainGrid> = {}
+const defaultArgs = {}
 
 Normal.args = { ...defaultArgs }
 Normal.argTypes = argTypes

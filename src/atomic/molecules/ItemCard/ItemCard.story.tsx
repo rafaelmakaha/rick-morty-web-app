@@ -43,9 +43,12 @@ const argTypes = {
   }
 }
 
-const defaultArgs: Omit<IItemCard> = {
+const defaultArgs: IItemCard = {
   color: '#506506',
   char: {
+    id: 2,
+    type: 'tipo',
+    gender: 'male',
     name: 'Rick Sanchez',
     status: 'Alive',
     species: 'Human',
