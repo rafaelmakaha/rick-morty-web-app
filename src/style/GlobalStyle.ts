@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
-import Schwifty from '../assets/fonts/schwifty.ttf'
+
+const Schwifty = '/fonts/schwifty.ttf'
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
